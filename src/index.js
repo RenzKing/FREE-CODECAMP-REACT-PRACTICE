@@ -14,6 +14,8 @@ const BookList = () => {
     <section className="booklist">
       <Book job="developer" />
       <Book title="king" number={22} />
+      <Book year={2023} />
+      <Book type="Education" />
     </section>
   );
 };
@@ -28,15 +30,15 @@ const BookList = () => {
 // }
 
 const Book = (props) => {
-  console.log(props);
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <h4>{author.toUpperCase()}</h4>
+      <h4>{author}</h4>
       <p>{props.title}</p>
       <p>{props.job}</p>
-      {console.log(props)}
+      <p>{props.year}</p>
+      <p>{props.type}</p>
     </article>
   );
 };
