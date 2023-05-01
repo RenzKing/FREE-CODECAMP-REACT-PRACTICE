@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 /////////////COMPONENTS///////////////////////
-const author = `David Flanagan`;
 const title = `JavaScript: The Definitive Guide: Master the World's Most-Used
   Programming Language`;
+const img = `./img/JS2.jpg" alt="Javascript`;
+const author = `David Flanagan`;
 
 const BookList = () => {
   return (
