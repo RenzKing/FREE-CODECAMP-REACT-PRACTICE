@@ -3,59 +3,50 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 ///VARIABLES////
-const title = `JavaScript: The Definitive Guide: Master the World's Most-Used
-  Programming Language`;
-const img = `./img/JS2.jpg`;
-const author = `David Flanagan`;
+
+const firstBook = {
+  author: "Expert Insight",
+  title: "Javascript from beginer to professional",
+  img: "./img/JS2.jpg",
+};
+
+const secondBook = {
+  author: `David Flanagan`,
+  title: `JavaScript: The Definitive Guide: Master the World's Most-Used
+  Programming Language`,
+  img: `./img/JS1.jpg`,
+};
 
 /////////////COMPONENTS///////////////////////
+
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book job="developer" />
-      <Book title="king" number={22} />
-      <Book year={2023} />
-      <Book type="Education" />
+      <Book
+        title={firstBook.title}
+        author={firstBook.author}
+        img={firstBook.img}
+      />
+      <Book
+        title={secondBook.title}
+        author={secondBook.author}
+        img={secondBook.img}
+      />
     </section>
   );
 };
 
-// function BookList() {
-//   return (
-//     <section className='booklist'>
-//       <Book job='developer' />
-//       <Book title='random title' number={22} />
-//     </section>
-//   );
-// }
-
 const Book = (props) => {
+  console.log(props);
   return (
     <article className="book">
-      <img src={img} alt={title} />
-      <h2>{title}</h2>
-      <h4>{author}</h4>
-      <p>{props.title}</p>
-      <p>{props.job}</p>
-      <p>{props.year}</p>
-      <p>{props.type}</p>
+      <img src={props.img} alt={props.title} />
+      <h2>{props.title}</h2>
+      <h4>{props.author}</h4>
     </article>
   );
 };
 
-// const Book = (props) => {
-//   console.log(props);
-//   return (
-//     <article className="book">
-//       <img src={img} alt={title} />
-//       <h2>{title}</h2>
-//       <h4>{author} </h4>
-//       <p>{props.job}</p>
-//       <p>{props.title}</p>
-//       <p>{props.number}</p>
-//     </article>
-//   );
-// };
 /////////////PRINT///////////////////////
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
