@@ -19,6 +19,7 @@ const secondBook = {
 
 /////////////COMPONENTS///////////////////////
 
+//BOOK LIST//
 const BookList = () => {
   return (
     <section className="booklist">
@@ -36,6 +37,7 @@ const BookList = () => {
   );
 };
 
+//BOOK//
 const Book = (props) => {
   console.log(props);
   return (
